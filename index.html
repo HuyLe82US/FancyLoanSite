@@ -1088,7 +1088,7 @@
 
                         <div class="col-md-8 animated" data-animation="fadeInUp" data-delay="200" data-speed="5">
 
-                            <form name="contactForm" id='contact_form' method="post" action='email.php'>
+                            <form name="contactForm" id='contact_form'>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div id='name_error' class='error'>Please enter your name.</div>
@@ -1117,34 +1117,7 @@
                                     </div>
                                 </div>
                             </form>
-                            <script>
-                                $(document).ready(function () {
-                                    $('#contact_form').on('submit', function (e) {
-                                        e.preventDefault(); // Prevent default form submission
-                                        
-                                        $('#mail_fail, #mail_success').hide(); // Hide existing messages
-                        
-                                        // AJAX call
-                                        $.ajax({
-                                            type: 'POST',
-                                            url: 'email.php', // Path to your PHP script
-                                            data: $(this).serialize(), // Serialize form data
-                                            success: function (response) {
-                                                response = response.trim(); // Remove whitespace or newlines
-                                                if (response === 'sent') {
-                                                    $('#mail_success').show(); // Show success message
-                                                } else {
-                                                    $('#mail_fail').show(); // Show failure message
-                                                }
-                                            },
-                                            error: function () {
-                                                $('#mail_fail').show(); // Show failure message on AJAX error
-                                            }
-                                        });
-                                    });
-                                });
-                            </script>
-                        
+
                         </div>
 
                         <div class="col-md-4">
@@ -1202,6 +1175,10 @@
     <script src="js/validation.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
     <script src="js/designesia.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    
+    <!-- Include Custom EmailJS Logic -->
+    <script src="email.js"></script>
 
     <!-- SLIDER REVOLUTION SCRIPTS  -->
     <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
