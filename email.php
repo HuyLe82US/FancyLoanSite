@@ -1,6 +1,6 @@
 <?php
 $subject = $_REQUEST['subject'] . ' Ajax HTML Contact Form : Demo'; // Subject of your email
-$to = 'info@designesia.com';  //Recipient's E-mail
+$to = 'thanhhuyle.austin@gmail.com';  //Recipient's E-mail
 
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= "From: " . $_REQUEST['email'] . "\r\n"; // Sender's E-mail
