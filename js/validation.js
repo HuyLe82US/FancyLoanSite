@@ -16,10 +16,10 @@ $(document).ready(function () {
             error = true;
             $('#name_error').fadeIn(500);
         }
-        if (email.length === 0 || email.indexOf('@') === -1) {
-            error = true;
-            $('#email_error').fadeIn(500);
-        }
+        // if (email.length === 0 || email.indexOf('@') === -1) {
+            // error = true;
+            // $('#email_error').fadeIn(500);
+        // }
         if (message.length === 0) {
             error = true;
             $('#message_error').fadeIn(500);

@@ -72,3 +72,17 @@ video {
     color: #fff; /* Adjust text color for readability */
     padding: 20px; /* Optional padding for content */
 }
+
+.text ul {
+    text-align: left; /* Ensures text is aligned to the left */
+    list-style-type: disc; /* Standard bullet style */
+    margin: 0; /* Removes default margin */
+    padding-left: 20px; /* Ensures bullets have proper spacing */
+}
+
+.text ul li {
+    text-align: left; /* Justifies each list item to the left */
+    margin-bottom: 5px; /* Adds space between list items for better readability */
+}
+
+
